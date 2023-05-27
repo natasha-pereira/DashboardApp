@@ -28,9 +28,9 @@ const ContactPage = () => {
 						Contact button
 					</div>
 				) : (
-					userDetails.map((c: any, index: any) => (
-						<ContactCard {...c} key={index} />
-					))
+					userDetails
+						.slice(1)
+						.map((c: any, index: any) => <ContactCard {...c} key={index} />)
 				)}
 			</div>
 		</>
